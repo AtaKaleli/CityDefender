@@ -5,8 +5,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     
-    private bool isDead;
-    private float _timer;
+    //private bool isDead;
+    //private float _timer;
     void Start()
     {
         
@@ -15,8 +15,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _timer += Time.deltaTime;
-        print(_timer);
+       
     }
 
    
