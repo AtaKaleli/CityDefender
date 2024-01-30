@@ -10,6 +10,9 @@ public class PlayerShoot : MonoBehaviour
     public float _flingForce = 500;
     private float _timer;
     private float _specialShootTime = 3;
+
+    public AudioSource _singleShot;
+    public AudioSource _specialShot;
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -24,13 +27,14 @@ public class PlayerShoot : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            _singleShot.Play();
             GameObject newShoot = Instantiate(_playerShootPrefab, transform.position + new Vector3(0.5f,0,0), Quaternion.identity);
             Rigidbody2D shootRB = newShoot.GetComponent<Rigidbody2D>();
             shootRB.AddForce(new Vector2(_flingForce, 0));
         }
         else if (Input.GetKeyDown(KeyCode.F) && _timer >= _specialShootTime)
         {
-
+            _specialShot.Play();
             for (int i = 0; i < 20; i++)
             {
                 float yCoordinate = i - 9.5f;
