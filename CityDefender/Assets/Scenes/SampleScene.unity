@@ -132,6 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 467229126}
+  - component: {fileID: 467229127}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -154,6 +155,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &467229127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467229125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1ebf3c6b2f59324aade3cbd188190b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyPrefab: {fileID: 5371915799311668883, guid: c55f1558d7b0c584f86e8f059e9d78db, type: 3}
 --- !u!1 &475618839
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,14 +381,13 @@ GameObject:
   m_Component:
   - component: {fileID: 673990117}
   - component: {fileID: 673990116}
-  - component: {fileID: 673990120}
   - component: {fileID: 673990119}
   - component: {fileID: 673990118}
-  - component: {fileID: 673990121}
   - component: {fileID: 673990122}
+  - component: {fileID: 673990120}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -494,18 +507,6 @@ BoxCollider2D:
   m_Size: {x: 1.3333334, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &673990120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 673990115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dd3a467fccf78c40bb22c55d5aaa505, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &673990121
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

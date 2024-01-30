@@ -6,7 +6,7 @@ public class EnemySpawner : MonoBehaviour
 {
     public GameObject _enemyPrefab;
     private float yCoordinate = 6.78f;
-
+    
 
     private void Start()
     {
