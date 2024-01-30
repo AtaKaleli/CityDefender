@@ -9,7 +9,7 @@ public class PlayerBullet : MonoBehaviour
         Destroy(gameObject);
         GameObject otherGO = collision.gameObject;
 
-        if(otherGO.tag == "Enemy")
+        if(otherGO.tag == "Enemy" || otherGO.tag == "enemyBullet")
         {
             Destroy(otherGO);
         }

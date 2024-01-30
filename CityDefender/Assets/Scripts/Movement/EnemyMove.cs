@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
 {
-    private float _enemyMoveSpeed = 3;
+    private float _enemyMoveSpeed = 2;
 
     // Update is called once per frame
     void Update()
