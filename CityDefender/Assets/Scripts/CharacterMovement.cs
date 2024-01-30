@@ -7,7 +7,7 @@ public class CharacterMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Debug.Log("github try");
     }
 
     // Update is called once per frame
