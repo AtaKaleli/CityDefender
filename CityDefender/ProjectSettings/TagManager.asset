@@ -7,6 +7,7 @@ TagManager:
   - CityIsReached
   - playerBullet
   - enemyBullet
+  - Enemy
   layers:
   - Default
   - TransparentFX
