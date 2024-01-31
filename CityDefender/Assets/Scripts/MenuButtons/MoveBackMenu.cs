@@ -7,7 +7,7 @@ public class MoveBackMenu : MonoBehaviour
     public GameObject _mainMenu;
     public GameObject _nextScreen;
 
-    public void OnClickMoveCredits()
+    public void OnClickMoveMenu()
     {
         _mainMenu.SetActive(true);
         _nextScreen.SetActive(false);
