@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        //Destroy(gameObject, 10);
-    }
+    
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -17,6 +13,7 @@ public class Enemy : MonoBehaviour
         {
             
             Time.timeScale = 0;
+            
         }
 
     }
