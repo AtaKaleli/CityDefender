@@ -13,8 +13,10 @@ public class PlayerShoot : MonoBehaviour
 
     public AudioSource _singleShot;
     public AudioSource _specialShot;
+    private UIManager _uiManager;
     void Start()
     {
+        _uiManager = FindObjectOfType<UIManager>();
         _rb = GetComponent<Rigidbody2D>();
         _timer = _specialShootTime;
     }
@@ -22,6 +24,8 @@ public class PlayerShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        _uiManager.UpdateShotReload(_timer / _specialShootTime);
         _timer += Time.deltaTime;
         
         
