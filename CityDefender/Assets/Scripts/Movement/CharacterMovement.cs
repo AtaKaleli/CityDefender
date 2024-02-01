@@ -10,6 +10,7 @@ public class CharacterMovement : MonoBehaviour
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+        transform.position = new Vector3(-6.82f, 0.4f, 0);
     }
 
     private void FixedUpdate()
