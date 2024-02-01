@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
     public TMPro.TextMeshProUGUI _powerShotInfo;
     public TMPro.TextMeshProUGUI _lineInfo;
     public TMPro.TextMeshProUGUI _bossInfo;
-
+    public AudioSource _lostAudio;
     public GameObject _loosePanel;
     public SpriteRenderer _backGround;
     private float _timeValue = 0;
@@ -56,6 +56,7 @@ public class UIManager : MonoBehaviour
 
     public void OnDeathShowPanel()
     {
+        _lostAudio.Play();
         _timeScore.text = "You have successfully defended your city \n" + _timeValue.ToString("0.00") + "\n Seconds";
         _backGround.color = Color.red;
         _loosePanel.SetActive(true);
