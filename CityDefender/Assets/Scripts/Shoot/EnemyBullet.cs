@@ -4,24 +4,23 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
-   
+    private UIManager _uiManager;
     
+
     private void Start()
     {
-        Destroy(gameObject, 2);
-        
-        
-        
+        // Assuming UIManager is on a different GameObjec
+        _uiManager = FindObjectOfType<UIManager>();
+
     }
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         GameObject otherGO = collision.gameObject;
-        if(otherGO.tag == "Player")
+        if (otherGO.tag == "Player")
         {
-
-            
+            _uiManager.OnDeathShowPanel();
             Time.timeScale = 0;
-
         }
     }
 }

@@ -1,18 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public TMPro.TextMeshProUGUI _timer;
+    public TMPro.TextMeshProUGUI _timeScore;
+    public GameObject _loosePanel;
+    private float _timeValue = 0;
+    
+
+
+    private void Update()
     {
-        
+        if(SceneManager.GetActiveScene().name == "GameScene")
+        {
+            _timeValue += Time.deltaTime;
+            _timer.text = "Time: " + _timeValue.ToString("0.00");
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnDeathShowPanel()
     {
-        
+        _loosePanel.SetActive(true);
     }
 }
