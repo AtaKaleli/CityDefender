@@ -11,6 +11,7 @@ public class EnemyBullet : MonoBehaviour
     {
         // Assuming UIManager is on a different GameObjec
         _uiManager = FindObjectOfType<UIManager>();
+        Destroy(gameObject, 2);
 
     }
     
