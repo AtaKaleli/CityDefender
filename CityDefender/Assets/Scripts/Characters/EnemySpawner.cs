@@ -27,15 +27,16 @@ public class EnemySpawner : MonoBehaviour
         while (true)
         {
 
-            _spawnSpeed = _timer / 10;
+            _spawnSpeed = _timer / 25;
             Instantiate(_enemyPrefab, new Vector3(12.62f, Random.Range(-yCoordinate, yCoordinate), 0), Quaternion.identity);
             
-            if(2f < (_timer / 10))
+            if(4f < (_timer / 25))
             {
-              _spawnSpeed = 2f;
+              _spawnSpeed = 4f;
+              
             }
             
-            yield return new WaitForSeconds(2f - _spawnSpeed + 1f);
+            yield return new WaitForSeconds(4f - _spawnSpeed + 0.7f);
         }
        
     }

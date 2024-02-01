@@ -9,7 +9,7 @@ public class PlayerShoot : MonoBehaviour
     private Rigidbody2D _rb;
     public float _flingForce = 500;
     private float _timer;
-    private float _specialShootTime = 3;
+    private float _specialShootTime = 8;
 
     public AudioSource _singleShot;
     public AudioSource _specialShot;
