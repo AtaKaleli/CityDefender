@@ -39,13 +39,13 @@ public class UIManager : MonoBehaviour
             _powerShotInfo.enabled = false;
             _lineInfo.enabled = false;
         }
-        if(_timeValue > 20 && !ifFlags[1])
+        if(_timeValue > 100 && !ifFlags[1])
         {
             
             ifFlags[1] = true;
             _bossInfo.enabled = true;
         }
-        if(_timeValue > 25 && !ifFlags[2])
+        if(_timeValue > 105 && !ifFlags[2])
         {
             
             ifFlags[2] = true;
